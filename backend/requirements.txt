@@ -3,3 +3,4 @@ flask-cors
 flask-sqlalchemy
 flask-jwt-extended
 gunicorn
+reportlab==3.x.x
