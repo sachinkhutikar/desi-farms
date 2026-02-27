@@ -32,7 +32,7 @@ def create_app():
     CORS(
     app,
     origins=[
-        "https://desi-farms-i3z2n2i5w-sachinkhutikars-projects.vercel.app"
+        "https://desi-farms.vercel.app"
     ],
     supports_credentials=True
 )
