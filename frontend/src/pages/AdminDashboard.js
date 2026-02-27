@@ -270,7 +270,7 @@ export default function AdminDashboard() {
 
   /* ---------------- UI ---------------- */
 
-  const productsBusy = loadingProducts || saving;
+  
   const ordersBusy = loadingOrders;
 
   return (

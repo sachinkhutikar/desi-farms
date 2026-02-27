@@ -29,7 +29,7 @@ export default function ProductCard({ product, onAddToCart, onAddToWishlist }) {
         await onAddToCart(product.id, quantity);
       } else {
         // direct API call
-        await API.post("/cart/add", {
+        await API.post("/api/cart/add", {
           product_id: product.id,
           quantity,
         });

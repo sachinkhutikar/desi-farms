@@ -7,9 +7,9 @@ export default function Layout({ children }) {
   const location = useLocation();
 
   const [cartCount, setCartCount] = useState(0);
-  const [wishlistCount, setWishlistCount] = useState(0);
+  const [, setWishlistCount] = useState(0);
   const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("");
+  const [category] = useState("");
 
   // ✅ Reactive token
   const [token, setTokenState] = useState(getToken() || "");
@@ -29,7 +29,7 @@ export default function Layout({ children }) {
     } catch {
       return null;
     }
-  }, [token]);
+  }, []);
 
   const fetchCart = async () => {
     try {
@@ -53,7 +53,7 @@ export default function Layout({ children }) {
 
 const fetchWishlist = async () => {
   try {
-    const res = await API.get("/wishlist");
+    const res = await API.get("/api/wishlist");
 
     console.log("WISHLIST RESPONSE:", res.data); // 👈 debug once
 

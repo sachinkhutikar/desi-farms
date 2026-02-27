@@ -413,7 +413,24 @@ export default function Cart() {
 
             {/* COUPON */}
             
+<div style={styles.couponBox}>
+  <input
+    style={styles.input}
+    value={coupon}
+    onChange={(e) => setCoupon(e.target.value)}
+    placeholder="Enter coupon code"
+  />
 
+  <button style={styles.applyBtn} onClick={applyCoupon}>
+    Apply
+  </button>
+
+  {couponError && (
+    <div style={styles.couponError}>
+      {couponError}
+    </div>
+  )}
+</div>
             {/* BILLING + PAYMENT METHOD */}
             <div style={styles.billingBox}>
               <h3 style={{ marginTop: 0 }}>🧾 Billing Details</h3>
@@ -896,4 +913,35 @@ const styles = {
     border: "1px solid rgba(255,255,255,0.10)",
   },
   qrImg: { width: "100%", height: "auto", borderRadius: 14, display: "block" },
+  couponBox: {
+  marginTop: 18,
+  padding: 18,
+  borderRadius: 16,
+  background: "rgba(255,255,255,0.06)",
+  border: "1px solid rgba(255,255,255,0.10)",
+  display: "flex",
+  gap: 10,
+  flexWrap: "wrap",
+  alignItems: "center",
+},
+
+applyBtn: {
+  background: "linear-gradient(90deg,#7ee787,#5bbcff)",
+  border: "none",
+  padding: "10px 16px",
+  borderRadius: 12,
+  cursor: "pointer",
+  fontWeight: 900,
+},
+
+couponError: {
+  width: "100%",
+  marginTop: 8,
+  padding: "10px 12px",
+  borderRadius: 12,
+  border: "1px solid rgba(255,80,80,0.25)",
+  background: "rgba(255,80,80,0.14)",
+  fontWeight: 900,
+  fontSize: 12,
+},
 };
