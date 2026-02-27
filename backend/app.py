@@ -31,12 +31,18 @@ def create_app():
     # ==========================
     CORS(
     app,
-    resources={r"/api/*": {
-        "origins": [
-            "https://desi-farms-qhtnlvg4x-sachinkhutikars-projects.vercel.app"
-        ]
-    }}
+    origins="*",
+    allow_headers=["Content-Type", "Authorization"],
+    methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"]
 )
+    
+
+@app.after_request
+def after_request(response):
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    response.headers.add("Access-Control-Allow-Headers", "Content-Type,Authorization")
+    response.headers.add("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS")
+    return response
 
     # ==========================
     # INIT EXTENSIONS
