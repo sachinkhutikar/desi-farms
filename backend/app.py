@@ -31,8 +31,11 @@ def create_app():
     # ==========================
     CORS(
     app,
-    resources={r"/*": {"origins": "*"}},
-    supports_credentials=True
+    resources={r"/api/*": {
+        "origins": [
+            "https://desi-farms-qhtnlvg4x-sachinkhutikars-projects.vercel.app"
+        ]
+    }}
 )
 
     # ==========================
