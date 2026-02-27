@@ -30,10 +30,12 @@ def create_app():
     # CORS CONFIG (CORRECT ✅)
     # ==========================
     CORS(
-        app,
-        resources={r"/api/*": {"origins": "*"}},
-            supports_credentials=True
-    )
+    app,
+    origins=[
+        "https://desi-farms-gytv606if-sachinkhutikars-projects.vercel.app"
+    ],
+    supports_credentials=True
+)
 
     # ==========================
     # INIT EXTENSIONS
