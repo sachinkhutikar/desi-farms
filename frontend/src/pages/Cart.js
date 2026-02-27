@@ -913,35 +913,5 @@ const styles = {
     border: "1px solid rgba(255,255,255,0.10)",
   },
   qrImg: { width: "100%", height: "auto", borderRadius: 14, display: "block" },
-  couponBox: {
-  marginTop: 18,
-  padding: 18,
-  borderRadius: 16,
-  background: "rgba(255,255,255,0.06)",
-  border: "1px solid rgba(255,255,255,0.10)",
-  display: "flex",
-  gap: 10,
-  flexWrap: "wrap",
-  alignItems: "center",
-},
-
-applyBtn: {
-  background: "linear-gradient(90deg,#7ee787,#5bbcff)",
-  border: "none",
-  padding: "10px 16px",
-  borderRadius: 12,
-  cursor: "pointer",
-  fontWeight: 900,
-},
-
-couponError: {
-  width: "100%",
-  marginTop: 8,
-  padding: "10px 12px",
-  borderRadius: 12,
-  border: "1px solid rgba(255,80,80,0.25)",
-  background: "rgba(255,80,80,0.14)",
-  fontWeight: 900,
-  fontSize: 12,
-},
+  
 };
