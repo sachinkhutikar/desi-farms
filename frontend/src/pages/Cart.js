@@ -361,12 +361,14 @@ export default function Cart() {
                   {wishlistItems.map((item) => (
                     <div key={item.wishlist_id} style={styles.wishlistCard}>
                       <div style={{ display: "flex", gap: 14, alignItems: "center" }}>
-                        {item.image ? (
-                          <img
-                            src={`http://localhost:5000${item.image}`}
-                            alt={item.name}
-                            style={styles.wishImg}
-                          />
+                        const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+
+{item.image ? (
+  <img
+    src={`${API_URL}${item.image}`}
+    alt={item.name}
+    style={styles.wishImg}
+  />
                         ) : null}
 
                         <div style={{ flex: 1 }}>
