@@ -21,21 +21,21 @@ def seed_products():
             price=60,
             unit="1 Litre",
             stock=100,
-            image="/uploads/milk.png"
+            image="/uploads/milk.jpg"
         ),
         Product(
             name="Desi Ghee",
             price=550,
             unit="500 gm",
             stock=50,
-            image="/uploads/ghee.png"
+            image="/uploads/ghee.jpg"
         ),
         Product(
             name="Fresh Curd",
             price=80,
             unit="500 gm",
             stock=80,
-            image="/uploads/curd.png"
+            image="/uploads/curd.jpg"
         )
     ]
 
