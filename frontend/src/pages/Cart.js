@@ -2,6 +2,8 @@ import React, { useEffect, useMemo, useState } from "react";
 import API from "../services/api";
 import upiQr from "../assets/upi_qr.png";
 
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+
 export default function Cart() {
   const [cart, setCart] = useState({ items: [], total: 0 });
   const [loading, setLoading] = useState(true);
@@ -361,14 +363,14 @@ export default function Cart() {
                   {wishlistItems.map((item) => (
                     <div key={item.wishlist_id} style={styles.wishlistCard}>
                       <div style={{ display: "flex", gap: 14, alignItems: "center" }}>
-                        const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
-{item.image ? (
-  <img
-    src={`${API_URL}${item.image}`}
-    alt={item.name}
-    style={styles.wishImg}
-  />
+
+                {item.image ? (
+                <img
+                src={`${API_URL}${item.image}`}
+                alt={item.name}
+                 style={styles.wishImg}
+               />
                         ) : null}
 
                         <div style={{ flex: 1 }}>
