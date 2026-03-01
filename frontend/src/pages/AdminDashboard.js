@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import API from "../services/api";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState("products"); // "products" | "orders"
 
@@ -379,7 +381,9 @@ export default function AdminDashboard() {
 
                 {filteredProducts.map((p) => {
                   const disc = Number(p.discount_percent || 0);
-                  const imgSrc = p.image ? `http://127.0.0.1:5000${p.image}` : null;
+                  const imgSrc = p.image
+  ? `${API_URL}/static${p.image}`
+  : null;
 
                   return (
                     <div key={p.id} style={ui.tableRow}>
