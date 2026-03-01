@@ -6,7 +6,7 @@ from extensions import db
 
 
 def create_app():
-    app = Flask(__name__, static_folder="static")
+    app = Flask(__name__, static_folder="static", static_url_path="/static")
 
     # ==========================
     # BASE DIRECTORY
