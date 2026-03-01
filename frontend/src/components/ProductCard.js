@@ -96,11 +96,11 @@ export default function ProductCard({ product, onAddToCart, onAddToWishlist }) {
         </button>
 
         {product.image ? (
-          <img
-            src={`http://localhost:5000${product.image}`}
-            alt={product.name}
-            style={styles.image}
-          />
+  <img
+    src={`${process.env.REACT_APP_API_URL}${product.image}`}
+    alt={product.name}
+    style={styles.image}
+  />
         ) : (
           <div style={styles.placeholder}>No Image</div>
         )}

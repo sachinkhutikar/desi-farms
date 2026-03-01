@@ -94,21 +94,21 @@ export default function Wishlist() {
               }}
             >
               <div style={{ display: "flex", gap: "14px", alignItems: "center" }}>
-                {item.image ? (
-                  <img
-                    src={`http://localhost:5000${item.image}`}
-                    alt={item.name}
-                    style={{
-                      width: 70,
-                      height: 70,
-                      objectFit: "contain",
-                      borderRadius: 12,
-                      background: "rgba(0,0,0,0.25)",
-                      padding: 10,
-                      border: "1px solid rgba(255,255,255,0.08)",
-                    }}
-                  />
-                ) : null}
+  {item.image ? (
+    <img
+      src={`${process.env.REACT_APP_API_URL}${item.image}`}
+      alt={item.name}
+      style={{
+        width: 70,
+        height: 70,
+        objectFit: "contain",
+        borderRadius: 12,
+        background: "rgba(0,0,0,0.25)",
+        padding: 10,
+        border: "1px solid rgba(255,255,255,0.08)",
+      }}
+    />
+  ) : null}
 
                 <div>
                   <h3 style={{ margin: 0 }}>{item.name}</h3>
