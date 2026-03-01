@@ -193,7 +193,7 @@ def seed_products():
             discount_percent=14,
             unit="1 Litre",
             stock=100,
-            image="/uploads/milk.png"
+            image="/uploads/milk.jpg"
         ),
         Product(
             name="Desi Ghee",
@@ -202,7 +202,7 @@ def seed_products():
             discount_percent=20,
             unit="500 gm",
             stock=50,
-            image="/uploads/ghee.png"
+            image="/uploads/ghee.jpg"
         ),
         Product(
             name="Fresh Curd",
@@ -211,7 +211,7 @@ def seed_products():
             discount_percent=12,
             unit="500 gm",
             stock=80,
-            image="/uploads/curd.png"
+            image="/uploads/curd.jpg"
         )
     ]
 
