@@ -36,7 +36,7 @@ export default function Wishlist() {
   const removeItem = async (wishlistId) => {
     try {
       // ✅ correct backend route: DELETE /api/wishlist/<wishlistId>
-      await API.delete(`/wishlist/${wishlistId}`);
+      await API.delete(`/wishlist/${wishlistId}/`);
 
       // ✅ Optimistic update
       setItems((prev) => prev.filter((item) => item.wishlist_id !== wishlistId));
