@@ -53,7 +53,7 @@ export default function Layout({ children }) {
 
 const fetchWishlist = async () => {
   try {
-    const res = await API.get("/api/wishlist");
+    const res = await API.get("/wishlist");
 
     console.log("WISHLIST RESPONSE:", res.data); // 👈 debug once
 
