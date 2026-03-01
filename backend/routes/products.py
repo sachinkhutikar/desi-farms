@@ -21,21 +21,21 @@ def seed_products():
             price=60,
             unit="1 Litre",
             stock=100,
-            image="/uploads/milk.jpg"
+            image="/static/uploads/milk.jpg"
         ),
         Product(
             name="Desi Ghee",
             price=550,
             unit="500 gm",
             stock=50,
-            image="/uploads/ghee.jpg"
+            image="/static/uploads/ghee.jpg"
         ),
         Product(
             name="Fresh Curd",
             price=80,
             unit="500 gm",
             stock=80,
-            image="/uploads/curd.jpg"
+            image="/static/uploads/curd.jpg"
         )
     ]
 
@@ -96,7 +96,7 @@ def add_product():
         image_file.save(full_path)
 
         # ✅ Correct path
-        image_path = f"/uploads/{filename}"
+        image_path = f"/static/uploads/{filename}"
 
     product = Product(
         name=name,
@@ -141,7 +141,7 @@ def update_product(id):
         image_file.save(full_path)
 
         # ✅ Correct path
-        product.image = f"/uploads/{filename}"
+        product.image = f"/static/uploads/{filename}"
 
     db.session.commit()
 
